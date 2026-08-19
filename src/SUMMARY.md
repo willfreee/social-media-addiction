@@ -1,10 +1,12 @@
 # Summary
 
 # Part One: Opening
+
 - [The Trap You Already Know](./01.md)
 - [Don't Change Anything Yet](./02.md)
 
 # Part Two: Illusion-Dismantling
+
 - [The Little Monster and the Big Monster](./03.md)
 - [The Illusion of Connection](./04.md)
 - [The Illusion of Staying Informed](./05.md)
@@ -20,10 +22,12 @@
 - [Watching Other People Live](./15.md)
 
 # Part Three: Reframe
+
 - [The Silence Isn't Empty](./16.md)
 - [What Was There All Along](./17.md)
 - [The Parasite Has No Power Left](./18.md)
 
 # Part Four: Liberation
+
 - [One Last Look](./19.md)
 - [The Closing Ritual](./20.md)
