@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Don&#x27;t Change Anything Yet - The Easy Way to Quit Social Media Addiction</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Easy Way to Quit Social Media Addiction</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/willfreee/social-media-addiction/youtube-addiction" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/willfreee/social-media-addiction/edit/main/src/src/02.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="dont-change-anything-yet"><a class="header" href="#dont-change-anything-yet">Don't Change Anything Yet</a></h1>
+<p>If you're holding this book, there's a good chance you want to stop — or at least, you want to want to stop. You've recognized something in the last chapter. The missing decision. The closed-app boomerang. The phantom tap. You've seen the cracks in the story you were telling yourself about being in control, and some part of you is ready to do something about it.</p>
+<p>So the first instruction I'm going to give you might sound completely backwards.</p>
+<p>Don't stop. Don't change anything. Don't delete your apps. Don't log out. Don't make any dramatic declarations to yourself or anyone else. Keep scrolling exactly as you always have.</p>
+<p>I mean that. If you finish this chapter and feel the urge to open Instagram, open Instagram. If you find yourself reaching for TikTok while waiting for the kettle to boil, reach for TikTok. If you habitually unlock your phone at a red light and tap X, do it. Change absolutely nothing about your behavior. Your only job — and I mean your only job, for the next several chapters — is to add one thing: watch yourself do it.</p>
+<p>That's the instruction. It's simple. It asks nothing of your willpower. It requires no discipline, no restraint, no effort to hold yourself back. And yet, for a lot of people reading this, it's going to feel deeply uncomfortable. Because when you've just recognized that you're caught in a trap, every instinct screams at you to act. To flee. To do something dramatic right now. The idea of continuing to scroll while reading a book about quitting feels wrong — like sitting in a burning building and taking notes on the flames instead of running for the exit.</p>
+<p>But here's the question that instinct doesn't want you to ask: how many times have you already tried to run for the exit?</p>
+<p>Think about it. Every previous attempt you've made to quit, cut back, or "be better" about social media — what did they all have in common? They started with action. A surge of determination. A dramatic gesture. You deleted the apps in a burst of frustration. You announced a digital detox. You set a screen time limit and swore you'd stick to it this time. You felt that familiar rush of a new resolution — and underneath it, if you're honest, that familiar flicker of dread about how long it would last.</p>
+<p>And then what happened? A few days later, maybe a week, maybe even a month, you were right back where you started. The apps were reinstalled. The time limits were ignored. The detox was quietly abandoned. And you felt worse than before, because now you had proof — or what looked like proof — that you simply lacked the discipline to follow through.</p>
+<p>Here's the thing. Those attempts didn't fail because you're weak. They failed because you tried to sprint out of a maze while still believing the dead ends were exits. The decision to stop came first — and the understanding of what you were actually dealing with never arrived at all. You were fighting something you hadn't yet seen clearly. You were trying to overpower a compulsion with willpower before you knew what the compulsion was made of, how it operated, or why it had a hold on you in the first place.</p>
+<p>Imagine trying to disable a piece of machinery you've never looked at. You don't know how it's powered. You don't know which parts are load-bearing and which are decorative. You don't know where the off switch is, or if there even is one. But you walk up to it, full of determination, and start yanking at random wires. Sometimes you get lucky and it sputters for a moment. But it always kicks back on eventually, because you never actually understood what you were doing. You were just flailing.</p>
+<p>That's what a forced digital detox looks like. Flailing at a machine you haven't examined. And the machine always wins, because the machine was designed by people who understand your psychology better than you do — at least, better than you do right now. That's about to change. But it can't change if you refuse to look at the machine while it's running.</p>
+<p>So here's what we're going to do instead. You're not going to be a general waging war on your own habits. You're going to be a naturalist. A curious observer. The kind of person who sits quietly in a clearing and watches an animal go about its routines — not judging it, not trying to force it to change, just learning its patterns, its triggers, its movements. Because once you truly understand the animal, you can predict its behavior. And once you can predict it, you're no longer at its mercy.</p>
+<p>Think about a smaller, stranger version of this. Have you ever walked into a room and completely forgotten why you went there? You stand in the doorway, blank, mildly annoyed at yourself. The thought was there a second ago, and now it's gone. Now, if someone told you the solution was to forbid yourself from ever entering that room again, you'd think they were insane. That's not a solution. That's avoidance. The real solution — the only one that actually works — is to slow down next time, walk into the room exactly as you normally would, and pay very close attention to the exact moment the thought disappears. What triggered it? What was happening in your mind right before it vanished? You don't solve the mystery by fleeing the room. You solve it by entering the room with your eyes open.</p>
+<p>Your social media use is the same. You can't dismantle a mechanism you refuse to look at while it's running. If you delete everything right now, in a burst of panicked determination, you'll never get to watch the trap operate from the inside. You'll never see, in real time, the exact moment your thumb moves before your conscious mind weighs in. You'll never catch the closed-app boomerang in action. You'll never feel the phantom vibration and then stop and think, Wait — what just happened there? You'll have fled the room before you learned anything about why you kept walking into it.</p>
+<p>The impulse to stop immediately is completely natural, but it's not wisdom. It's impatience dressed up as discipline. And impatience is part of what got you here in the first place — the inability to sit with a moment of boredom, a flicker of anxiety, a micro-pause in the day, without reaching for the phone. If you can't tolerate the discomfort of not immediately trying to fix this, you're still operating inside the same low-tolerance-for-discomfort wiring that the apps exploit. The first act of genuine freedom isn't deleting anything. It's slowing down enough to watch.</p>
+<p>Now, as you sit with this instruction — keep scrolling, keep checking, just watch yourself do it — you might notice something interesting. In fact, you might be noticing it right now, while you're reading these words.</p>
+<p>There's a little flicker happening. Maybe it's in your thumb. Maybe it's a subtle restlessness in your chest. Maybe it's a thought that keeps drifting toward your phone, even though you're in the middle of a chapter. Just a quick check. Just to see if anything came in. I'll come right back to the book. That little flicker — that's one thing. It's small. It's physical. It's almost like a tiny muscle twitch or a mild hunger pang. It doesn't have a story attached to it. It's just… a sensation. An urge.</p>
+<p>But there's something else you might also be feeling. A heavier weight. A voice with a lot more to say. It's the voice that says things like: Social media is how I stay connected to people. If I really stop, I'll be isolated. I need it for work. I need it to know what's going on in the world. Without it, I'll fall behind. I'll miss something important. I'll be out of the loop. Everyone will forget about me. That voice isn't a flicker in your thumb. That voice is a whole narrative. It's dense. It's persuasive. It feels true — or at least, it feels like it's been true for so long that questioning it is unsettling.</p>
+<p>Now, notice something. That little flicker in your thumb — the urge to check right now — and that heavy voice telling you social media is essential to your life and identity… do those feel like the same thing? Or does one feel small and physical, and the other feel large and story-driven? If you're paying attention, you can already feel the difference. The urge is a brief bodily event. The voice is a complex belief system. They happen at the same time, and they've been tangled together for so long that they feel like one big, overwhelming problem. But they're not one thing. They're two.</p>
+<p>We're going to call these two things the Little Monster and the Big Monster. You don't need to understand them fully yet — that's what the next chapter is for. For now, the only thing I want you to do is notice that they're not the same. The Little Monster is the flicker. The thumb-twitch. The phantom vibration. The mild restlessness that shows up when you're standing in line and your hand drifts toward your pocket before you've even registered the thought I should check my phone. It's small. It's physical. It's not a moral failing and it's not an enemy — it's just a nervous system doing what nervous systems do when they've been trained to expect a reward at irregular intervals. The Big Monster is everything else. The beliefs. The fears. The stories about why you need it, why you can't live without it, why stopping would be a loss rather than a liberation. The Big Monster is the voice that says you'll miss something essential and this is how the world works now and everyone else is on there, so if you're not, you're invisible.</p>
+<p>You'll meet them both properly in the next chapter. For now, just hold the distinction lightly. As you keep scrolling over the coming days — and you will keep scrolling, because that's the instruction — watch for both of them. When the urge to open the app arises, ask yourself: Is this the Little Monster or the Big Monster talking right now? You might be surprised by how often the answer is "both" — and how much lighter the whole thing feels when you can separate a small physical flicker from a dense web of beliefs that can actually be examined, questioned, and dismantled.</p>
+<p>So here's the instruction, stated plainly, with no fine print, no exceptions to track, and no clever tricks to lean on.</p>
+<p>Keep your apps. Keep your accounts. Keep your routines. Scroll when you feel like scrolling. Check when you feel like checking. Refresh when you feel like refreshing. Change absolutely nothing about what you do. Add only one thing: watch yourself do it.</p>
+<p>That's it. That's the whole instruction. You're not being asked to be "good." You're not being asked to resist anything. You're not being tested. If you open TikTok at 11 p.m. and scroll for forty minutes, you haven't failed — you've gathered data. If you close Instagram in frustration and reopen it two seconds later, you haven't slipped up — you've just witnessed the boomerang in real time. There is no guilt in this process. There is no "cheating." There is only watching, and learning, and letting the understanding build at its own pace.</p>
+<p>What if, for the next several chapters, your only job was to be a curious observer of your own thumb? No rules. No restrictions. No sense that you're supposed to be doing something different than what you're doing. Just watching. Can you give yourself permission to do that?</p>
+<p>Because here's what that permission unlocks. The rest of this book — everything in Part Two, all the illusion-dismantling that's coming — depends on you watching the trap operate in your own life while you read about it. If you stop now, you'll be reading about the Illusion of Connection in the abstract, trying to remember what it felt like to mistake a heart notification for actual intimacy. That's a lecture. It might be interesting, but it won't change anything. But if you're still scrolling while you read that chapter — if you can feel the little dopamine spark of a like while simultaneously reading about why it's a slot-machine lever, not a social bond — that's not a lecture. That's a live demonstration. And live demonstrations are what actually shift the way you see things.</p>
+<p>The book isn't here to give you information. It's here to change what you notice. And you can't notice something you've already stopped doing.</p>
+<p>So exhale. The pressure to act immediately is gone. You don't need to be strong. You don't need to be disciplined. You don't need to prove anything to anyone, including yourself. Your only job is to pay attention. The understanding will do the work. You just need to keep the observation camera rolling.</p>
+<p>Now, keep reading. And the next time you reach for your phone — which might be thirty seconds from now — just watch your hand move. Watch the thumb find the icon. Watch the feed open. Watch whatever happens next. You're not doing anything wrong. You're following instructions. And for the first time, you're doing it with your eyes open.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="01.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="03.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="01.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="03.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

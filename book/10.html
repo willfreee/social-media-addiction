@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Who&#x27;s Really Choosing Your Feed - The Easy Way to Quit Social Media Addiction</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Easy Way to Quit Social Media Addiction</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/willfreee/social-media-addiction/youtube-addiction" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/willfreee/social-media-addiction/edit/main/src/src/10.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="whos-really-choosing-your-feed"><a class="header" href="#whos-really-choosing-your-feed">Who's Really Choosing Your Feed</a></h1>
+<p>You follow who you follow. You like what you like. You feel, when you open the app, that the feed you're seeing is the feed you built — a reflection of your interests, your relationships, your choices. You decided to follow these accounts. You decided what deserves a heart and what deserves a scroll-past. The whole thing feels like an extension of your preferences, a personalized magazine where you're both the subscriber and the editor.</p>
+<p>But ask yourself this: who decided that you should see this particular post, right now, at the top of your feed?</p>
+<p>Was it you? Did you consciously choose for this piece of content — out of the thousands of posts from accounts you follow, out of the millions of posts from accounts you don't — to appear in front of your eyes at this exact moment? Or was that decision made by a machine? A machine that has never met you, that cares nothing about your well-being or your relationships or what you'd genuinely like to spend your time on, but that has learned, with terrifying precision, exactly which emotional triggers keep your thumb moving upward.</p>
+<p>In the last chapter, we looked at the slot machine mechanics — the levers, the variable rewards, the near misses. Those are the mechanisms that train your hand to pull. But who decides what appears when you pull? That's the algorithm. And the algorithm is the subject of an illusion so foundational that several of the Big Monster's other arguments depend on it. The illusion that you are in control of what you see.</p>
+<h3 id="the-magazine-that-ignores-your-subscription"><a class="header" href="#the-magazine-that-ignores-your-subscription">The Magazine That Ignores Your Subscription</a></h3>
+<p>Let's start with the most basic layer of this illusion. Your follow list. The accounts you've deliberately chosen — friends, creators, journalists, artists, brands. You point to this list as proof of autonomy. <em>I built this. These are my choices. The feed is just showing me what I asked to see.</em></p>
+<p>Now look at what actually appears in your feed, and compare it to what you followed. You followed a close friend — someone whose life you genuinely want to keep up with. When was the last time you saw their posts? Not their stories, not their occasional viral moment, but their ordinary, everyday updates? Weeks ago? Months? They're still posting. You're just not seeing it. The algorithm decided their content wasn't engaging enough to surface.</p>
+<p>You followed a news source because you wanted balanced, thoughtful reporting. But what actually shows up from that source in your feed? Not the careful analysis pieces. Not the nuanced investigations. The inflammatory opinion columns. The hot takes. The stories that triggered outrage in other users, so the algorithm boosted them to you. You wanted substance. The algorithm gave you whatever would keep your thumb moving.</p>
+<p>You followed a creator because you loved their art. But the feed keeps surfacing their most controversial takes, their most divisive posts — because those generate comments, and comments are engagement, and engagement is what the algorithm is optimizing for. You didn't ask for this. You didn't choose this. But the follow list is not a list of demands. It's a list of suggestions, and the algorithm treats your suggestions as optional input to a system whose real goal has nothing to do with what you want.</p>
+<p>Imagine you subscribe to a magazine. You fill out a detailed preference form — topics you're interested in, writers you admire, the kind of content that enriches your life. But the magazine doesn't send you what you asked for. It sends you whatever it thinks will keep you turning pages — which turns out to be increasingly extreme versions of things that make you angry, anxious, or outraged. You're still "subscribed," technically. Your name is still on the mailing list. But are you choosing what you read? Or has the magazine quietly replaced your preferences with its own?</p>
+<p>That's your feed. The accounts you follow are real. The fact that you chose them is real. But the choice of what you actually see — which of their posts surface, in what order, at what frequency, surrounded by what other content — that choice was taken from you a long time ago. You handed it over without realizing, because the handover was invisible. The follow list gave you the sensation of curating. The algorithm gave you the actual curation. And the two have been drifting apart ever since.</p>
+<h3 id="the-chef-who-doesnt-care-what-youre-hungry-for"><a class="header" href="#the-chef-who-doesnt-care-what-youre-hungry-for">The Chef Who Doesn't Care What You're Hungry For</a></h3>
+<p>But surely, you might think, the algorithm is on my side. It's learning my preferences. It's showing me more of what I like. That's the whole point of a personalized feed.</p>
+<p>Let's be precise about what the algorithm is actually learning. It's not learning what you like. It's learning what keeps you engaged. And those are not remotely the same thing.</p>
+<p>Think about the content that consistently surfaces at the top of your feed. Is it the calm, informative post from a source you genuinely respect — the one that leaves you feeling thoughtful and satisfied? Or is it the inflammatory hot take from a stranger, the one that makes your chest tighten with rage or vindication? Is it the quiet personal update from a friend you care about? Or is it the viral video that has nothing to do with your life but happens to be engineered for maximum watch time?</p>
+<p>The calm, satisfying post doesn't keep you on the platform. It leaves you feeling complete — informed, touched, entertained enough to close the app and do something else. The inflammatory hot take, the outrageous take, the envy-inducing vacation photo, the anxiety-producing news alert — these don't satisfy. They agitate. They create a small unresolved tension that can only be temporarily soothed by more scrolling. And the algorithm has learned this. It has learned that satisfied users close the app. Agitated users stay. So it serves agitation. Not because it's malicious. Because it's optimizing for the only metric that matters to the platform: time on site.</p>
+<p>If you told a chef what foods you enjoy, and the chef served you increasingly saltier, fattier, more addictive versions of those foods — not because they're what you asked for, but because they're what keeps you eating — would you say the chef is "learning your preferences"? Or would you say the chef has figured out how to hijack your appetite and is no longer interested in what you actually want? The chef doesn't hate you. The chef just has a different goal than you do. Your goal is a satisfying meal. The chef's goal is to keep you at the table. And those goals, after a certain point, are in direct conflict.</p>
+<p>The algorithm is the chef. It's not your assistant. It's not neutral. It's an engagement-maximizer, and your conscious preferences are just raw material it uses to keep the slot machine spinning. The content you'd genuinely choose — the content that would leave you feeling nourished and ready to move on — is systematically deprioritized in favor of content that leaves you slightly unsettled, slightly unsatisfied, slightly more likely to keep scrolling. Not every post, every time. But enough to shape the overall character of your feed. Enough to keep you in the chair.</p>
+<h3 id="the-stranger-who-knows-you-better-than-you-do"><a class="header" href="#the-stranger-who-knows-you-better-than-you-do">The Stranger Who Knows You Better Than You Do</a></h3>
+<p>Now, you might be skeptical. <em>The algorithm doesn't know me that well. It's just an app. I'm more complex than a machine can understand. My reactions aren't that predictable.</em></p>
+<p>Let's look at the data the algorithm has on you. Every like you've ever tapped. Every share. Every comment. Every post you lingered on for an extra half-second — the algorithm tracks that too. Every video you rewatched. Every link you clicked. Every search you made. Every time of day you opened the app and how long you stayed. Over months and years, this adds up to a dataset so detailed that the algorithm has built a model of your emotional triggers more precise than anything you could articulate about yourself.</p>
+<p>It knows what makes you angry — not just the topics, but the specific framing, the specific words, the specific time of day when you're most susceptible. It knows what makes you envious. It knows what makes you feel validated, vindicated, superior. It knows what kind of content you'll share when you're feeling a certain way. It knows that on Tuesday evenings you're tired and more likely to passively consume, while on Saturday mornings you're more likely to engage. It knows things about your emotional patterns that you have never consciously noticed, because it has been watching you for years with a single-minded focus that no human being could sustain.</p>
+<p>If a stranger followed you around for a year, writing down everything you looked at, everything you reacted to, everything that made your heart rate change — and then used that data to build a room designed specifically to keep you inside it as long as possible — would you feel like you chose to be in that room? Or would you feel like the room was chosen for you, by someone who knew your triggers better than you do? The room isn't forcing you to stay. The door is unlocked. But every object in the room, every sound, every image, has been placed there based on an intimate understanding of what captures and holds your attention. You could leave. But the room makes leaving feel like missing something.</p>
+<p>This is the asymmetry at the heart of the algorithm trap. You experience the feed as a series of spontaneous micro-choices — <em>I'll look at this, I'll skip that, I'll pause here</em> — but the algorithm has already predicted, with high accuracy, what will capture your attention before you even see it. The choices feel free because you're making them in the moment. But they're made inside an environment that has been pre-configured to make certain choices almost inevitable. The menu was written before you sat down. The algorithm isn't responding to your choices. It's anticipating them — and then presenting options it already knows you'll take.</p>
+<h3 id="the-machine-that-flattens-everything"><a class="header" href="#the-machine-that-flattens-everything">The Machine That Flattens Everything</a></h3>
+<p>There's another distortion happening, and it's easier to miss because it's so familiar. Look at your feed — really look at the sequence of content as you scroll. A friend's baby photo. A political crisis. A funny meme. A stranger's traumatic personal story. An advertisement. A breaking news alert. An influencer's vacation photos. A thread about systemic injustice.</p>
+<p>These are fundamentally different kinds of content. Different contexts. Different emotional weights. Different relationships to the person who posted them. Your friend's baby photo is not the same category of thing as a stranger's outrage thread. A personal tragedy shared by someone you love is not equivalent to a brand's promotional post. But in the feed, they all look exactly the same. Same format. Same frame. Same size. Same swipe gesture to move past them. Same engagement metrics underneath — likes, comments, shares — reducing every piece of content to a single, comparable score.</p>
+<p>The feed doesn't distinguish between a friend's grief and a stranger's opinion and a corporation's marketing campaign. It flattens everything into interchangeable content units, then ranks them by engagement potential. The baby photo gets less engagement than the outrage thread, so the outrage thread surfaces higher. The thoughtful personal reflection gets less engagement than the inflammatory hot take, so the hot take dominates. The algorithm doesn't know or care that one of these things matters to you and the other doesn't. It only knows which one keeps thumbs moving.</p>
+<p>If you took a letter from your mother, a ransom note, a grocery list, a love poem, and a death threat, chopped them all into equal-sized squares, and shuffled them into a single stack — would that stack be "a rich, varied reading experience"? Or would the meaning of each document be destroyed by the act of flattening them into equivalent units of content? The mother's letter, read alone, is intimate and meaningful. Shuffled between a ransom note and a grocery list, it becomes just another square — its emotional weight stripped by the context the shuffling creates.</p>
+<p>Your feed is the shuffling machine. It takes content from every context — personal, political, commercial, artistic, intimate, performative — and renders it all in the same format, at the same scale, with the same metrics attached. The diversity you perceive is an illusion. Everything has been processed through the same flattening engine, and what emerges on the other side is not a rich ecosystem of meaning but a uniform stream of engagement-optimized stimuli, differentiated only by how effectively each unit keeps you scrolling.</p>
+<h3 id="the-echo-chamber-you-didnt-build"><a class="header" href="#the-echo-chamber-you-didnt-build">The Echo Chamber You Didn't Build</a></h3>
+<p>At this point, you might be thinking about the range of perspectives you encounter in your feed. <em>I follow people with different views. I'm exposed to diverse opinions. My feed isn't an echo chamber — I've made sure of that.</em></p>
+<p>And you may have. You may follow people you disagree with. You may encounter perspectives that challenge your own. But let's look at what the algorithm does with that diversity over time.</p>
+<p>Every time you encounter a post from someone you disagree with, you have a reaction. Maybe you engage — you comment, you argue, you share with your own commentary. Maybe you don't engage directly, but you pause on it longer than you pause on posts you agree with, because it triggers a stronger emotional response. Either way, the algorithm registers the reaction. And here's what it learns: content that triggers outrage or tribal defensiveness generates more engagement than content that challenges you gently or presents nuance you need time to absorb. So the algorithm, optimizing for engagement, starts surfacing more of the inflammatory content from the "opposing" accounts and less of the thoughtful content. It starts showing you the most extreme versions of the perspectives you disagree with, because those trigger the strongest reactions.</p>
+<p>Meanwhile, content from your own "side" — the perspectives you already hold — also gets filtered through the engagement lens. The nuanced, self-critical voices get buried. The loudest, most inflammatory, most tribally vindicating voices rise to the top. Over time, your feed doesn't reflect the diversity of people you follow. It reflects the engagement patterns you've unconsciously trained into the algorithm — and those patterns almost always narrow the range of what you see. Not toward understanding. Toward intensity.</p>
+<p>If you went to a dinner party where the host had been instructed to only serve you foods you'd reacted strongly to in the past — and you'd always reacted strongly to salt — you'd get a very salty meal. You might say "but I also like vegetables." And the host might say "yes, but you didn't react as strongly to the vegetables, so I left them in the kitchen." Who chose the meal? You — the person who once responded to salt — or the host who filtered your options based on a single metric?</p>
+<p>The algorithm is the host. It doesn't optimize for diversity or challenge or intellectual nutrition. It optimizes for engagement. And engagement is a metric that rewards emotional intensity over nuance, outrage over curiosity, confirmation over genuine challenge. The "diverse perspectives" you believe you're exposed to are almost certainly a much narrower band of content than you imagine — and that band narrows further over time as the algorithm refines its model of what keeps you engaged. You're not exploring a broad information landscape. You're being funneled into an increasingly optimized engagement channel. And the walls of that channel are invisible from the inside.</p>
+<h3 id="the-best-follow-list-in-the-world"><a class="header" href="#the-best-follow-list-in-the-world">The Best Follow List in the World</a></h3>
+<p>The Big Monster has one more defense on this topic, and it's the one that sounds most reasonable. It's the defense of the discerning user.</p>
+<p><em>I'm intentional about who I follow. I curate carefully. Thoughtful people. Reliable sources. Genuine friends. I've unfollowed the junk. I've kept the good stuff. So my feed is high-quality. The algorithm can't distort something I've built so deliberately.</em></p>
+<p>And it's true that your follow list might be excellent. You might have done the work. But even if every single account you follow is beyond reproach, the algorithm still decides which of their posts you see. That creator you love posts ten times a week. You see two of those posts — the two the algorithm predicted would generate the most engagement. The other eight never reach your feed. That friend shares a mix of personal updates — some quiet, some exciting, some vulnerable, some mundane. The algorithm mostly shows you the ones with photos, because photos generate more engagement than text. You're not getting a representative sample of your friend's life. You're getting the engagement-optimized highlights.</p>
+<p>That news source you trust publishes a hundred stories a day. The algorithm surfaces the three that triggered the most outrage in other users. The calm, informative, context-rich pieces that make up the bulk of their journalism sit below the fold, algorithmically invisible. You think you're reading a great newspaper. You're reading a great newspaper as filtered through an editor whose only criterion is "will this keep the reader scrolling?"</p>
+<p>If you subscribed to a newspaper that employed brilliant journalists, but the editor decided to only show you the articles that would make you angry enough to keep reading — burying everything else — would you say "I read a great newspaper"? Or would you say "I read an editor who doesn't care what the journalists wrote, only what keeps me turning pages"? The journalists are still doing good work. The paper is still producing quality journalism. But you're not seeing it. You're seeing the editor's engagement-optimized selection. And the editor is a machine.</p>
+<p>Following good accounts doesn't bypass the algorithm. It only changes the raw material the algorithm has to work with. The algorithm is still the editor. It still decides what surfaces, in what order, based on what metric. The best follow list in the world is still being filtered through an engagement-maximizing machine, and that machine will always distort the output toward whatever keeps you scrolling. The "I follow good accounts" defense is the Big Monster's way of preserving the illusion of control while the actual control sits with a system you can't see and didn't choose.</p>
+<h3 id="the-menu-you-never-wrote"><a class="header" href="#the-menu-you-never-wrote">The Menu You Never Wrote</a></h3>
+<p>Let's observe a single scrolling session with new eyes. The kind of session you've had thousands of times without ever really watching it happen.</p>
+<p>You open the app. The first post appears at the top of your feed. You didn't put it there. The algorithm did — selected from an ocean of possible content, ranked by predicted engagement, placed in the position most likely to capture your attention. You look at it. Maybe you like it. Maybe you scroll past. Either way, your reaction is registered — another data point that refines the model.</p>
+<p>The second post appears. Chosen by the algorithm. The third. Chosen by the algorithm. You pause on the fourth. The algorithm notes the pause — this kind of content works — and adjusts what comes next. Every micro-choice you make is a choice from a menu the algorithm wrote. The menu was written based on data you didn't know you were providing, for a purpose you never agreed to. And the menu is designed not to satisfy you, but to keep you at the table ordering more.</p>
+<p>If a restaurant handed you a menu every night, and you chose your meal from it, you'd feel like you were making free choices. You're selecting. You're deciding. The meal reflects your preferences. But if you learned that the menu had been designed by someone who studied your eating habits in extraordinary detail and deliberately removed everything that would leave you satisfied — keeping only the foods that made you want to keep eating without ever feeling full — would you still say you chose your meal? Or would you say the meal was chosen for you, and your choice was an illusion that took place inside a system designed to prevent you from ever feeling done?</p>
+<p>You are choosing. In the narrowest sense, moment to moment, you are making decisions about what to look at and what to skip. But those choices occur entirely inside an environment you did not build, cannot see, and cannot influence. The algorithm sets the menu. You choose from the options provided. And the menu is engineered, with increasing precision over time, to make you stay longer, react more intensely, and feel less satisfied — because a satisfied diner leaves the restaurant, and a diner who leaves generates no revenue.</p>
+<p>This is not a conspiracy theory. It's not a secret plot. It's the explicit, documented business model of every major social media platform. Engagement is revenue. Time on site is revenue. And the algorithm's sole function is to maximize those metrics. Everything else — the connection, the information, the inspiration, the relaxation — is secondary. It exists on the platform, sometimes genuinely, but it's not what drives the curation. The curation is driven by engagement. And engagement, as we've seen, is often in direct conflict with what you actually want.</p>
+<p>I am not curating my feed. The algorithm is curating it for me — not based on what I want, but on what keeps me scrolling. Every post I see has been selected, prioritized, and placed by a system whose only goal is to maximize my time on the platform. My follow list, my likes, my pauses — these are not choices that shape my experience. They are data that trains a machine to capture my attention more effectively. The feed is not a reflection of my interests. It's a reflection of the algorithm's understanding of my emotional triggers. And once I see that I was never the one choosing, the illusion of control collapses — and with it, the sense that I'm getting something valuable from an environment that was never designed to give me anything but an urge to keep scrolling.</p>
+<p>The slot machine makes you pull. The algorithm decides what appears when you do. Together, they form a closed loop in which your attention is not being served — it's being harvested. And you've been calling the harvest a choice.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="09.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="11.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="09.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="11.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
